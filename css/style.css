@@ -23,11 +23,11 @@ body.hidden {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #cfcfcf;
+  background-color: #ececec;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -140,6 +140,22 @@ body {
   opacity: 0;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+}
+
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background-color: #ececec;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: #181617;
+}
+
+.modal::-webkit-scrollbar-button {
+  display: none;
 }
 
 .modal__close {
