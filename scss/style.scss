@@ -166,10 +166,7 @@ body {
   }
 }
 .modal__close:hover {
-  background: #000;
-  svg path {
-    fill: #fff;
-  }
+  border-color: #000;
 }
 .modal.active {
   display: block;
