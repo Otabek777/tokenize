@@ -23,7 +23,7 @@ body.hidden {
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 0;
 }
 
 body::-webkit-scrollbar-track {
@@ -120,9 +120,24 @@ body {
   background: var(--Black-100, #000000);
   border: 1px solid var(--White-10, rgba(255, 255, 255, 0.1019607843));
   border-radius: 70px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .main_btn svg {
   margin-right: 10px;
+}
+.main_btn svg path {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.main_btn:hover {
+  background: #fff;
+  border-color: #000;
+  color: #000;
+}
+.main_btn:hover svg path {
+  fill: #000;
 }
 
 .modal {
@@ -143,7 +158,7 @@ body {
 }
 
 .modal::-webkit-scrollbar {
-  width: 8px;
+  width: 0;
 }
 
 .modal::-webkit-scrollbar-track {
@@ -176,6 +191,19 @@ body {
   background: var(--White-100, #FFFFFF);
   border: 1px solid var(--Black-10, rgba(0, 0, 0, 0.1019607843));
   border-radius: 50%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.modal__close svg path {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.modal__close:hover {
+  background: #000;
+}
+.modal__close:hover svg path {
+  fill: #fff;
 }
 
 .modal.active {
@@ -209,6 +237,8 @@ body {
   vertical-align: middle;
   color: var(--Black-100, #000000);
   padding: 0 24px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .modal__input input::-webkit-input-placeholder {
   color: var(--Black-100, #000000);
@@ -224,6 +254,9 @@ body {
 }
 .modal__input input::placeholder {
   color: var(--Black-100, #000000);
+}
+.modal__input input:hover, .modal__input input:focus {
+  border-color: #000;
 }
 
 .modal__textarea {
@@ -246,6 +279,8 @@ body {
   color: var(--Black-100, #000000);
   padding: 20px 24px;
   margin-bottom: 24px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .modal__textarea::-webkit-input-placeholder {
@@ -266,6 +301,10 @@ body {
 
 .modal__textarea::placeholder {
   color: var(--Black-100, #000000);
+}
+
+.modal__textarea:hover, .modal__textarea:focus {
+  border-color: #000;
 }
 
 .modal__file {
@@ -293,6 +332,8 @@ body {
   cursor: pointer;
   color: transparent;
   padding-left: 54px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .modal__file .file::after {
   content: "";
@@ -305,6 +346,9 @@ body {
           transform: translate(-50%, -50%);
   background: var(--White-100, #FFFFFF) url(../img/file.svg) no-repeat center;
   background-size: 24px;
+}
+.modal__file .file:hover {
+  border-color: #000;
 }
 
 .modal__file-img {
@@ -364,10 +408,16 @@ body {
   color: var(--Black-100, #000000);
   border-radius: 200px;
   border: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .modal__btn .btn svg, .modal__btn .btn2 svg {
   min-width: 24px;
   margin-right: 16px;
+}
+.modal__btn .btn svg path, .modal__btn .btn2 svg path {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .modal__btn .btn {
   margin-right: 12px;
@@ -388,6 +438,13 @@ body {
           box-shadow: 0px 17.96px 33.42px 0px rgba(255, 228, 0, 0.0274509804);
   -webkit-box-shadow: 0px 43px 80px 0px rgba(255, 228, 0, 0.0196078431);
           box-shadow: 0px 43px 80px 0px rgba(255, 228, 0, 0.0196078431);
+}
+.modal__btn .btn:hover, .modal__btn .btn2:hover {
+  background: #000;
+  color: #fff;
+}
+.modal__btn .btn:hover svg path, .modal__btn .btn2:hover svg path {
+  fill: #fff;
 }
 
 .header {
@@ -440,6 +497,11 @@ body {
   background: var(--White-100, #FFFFFF);
   border: 1px solid var(--Black-10, rgba(0, 0, 0, 0.1019607843));
   border-radius: 50%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.header__soc a:hover {
+  border-color: #000;
 }
 
 .header__box {
@@ -557,6 +619,8 @@ h1 span::after {
   letter-spacing: 0%;
   color: #000;
   border-radius: 100px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .banner__input input::-webkit-input-placeholder {
   color: #000;
@@ -572,6 +636,9 @@ h1 span::after {
 }
 .banner__input input::placeholder {
   color: #000;
+}
+.banner__input input:hover, .banner__input input:focus {
+  border-color: #000;
 }
 
 .banner__btn {
@@ -594,9 +661,23 @@ h1 span::after {
   border-radius: 100px;
   background: var(--Primary, #FFFF00);
   border: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .banner__btn svg {
   margin-right: 10px;
+}
+.banner__btn svg path {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.banner__btn:hover {
+  background: #000;
+  color: #fff;
+}
+.banner__btn:hover svg path {
+  fill: #fff;
 }
 
 .tokenize {
@@ -651,6 +732,8 @@ h2 {
   border: 1px solid rgba(0, 0, 0, 0.0784313725);
   backdrop-filter: blur(10px);
   padding: 16px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .tokenize__link .input {
   width: 100%;
@@ -663,6 +746,23 @@ h2 {
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0%;
+  color: #000;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.tokenize__link .input::-webkit-input-placeholder {
+  color: #000;
+}
+.tokenize__link .input::-moz-placeholder {
+  color: #000;
+}
+.tokenize__link .input:-ms-input-placeholder {
+  color: #000;
+}
+.tokenize__link .input::-ms-input-placeholder {
+  color: #000;
+}
+.tokenize__link .input::placeholder {
   color: #000;
 }
 .tokenize__link .btn {
@@ -687,11 +787,27 @@ h2 {
   letter-spacing: 0%;
   vertical-align: middle;
   color: var(--Black-100, #000000);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .tokenize__link .btn svg {
   margin-right: 16px;
 }
+.tokenize__link .btn svg path {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.tokenize__link .btn:hover {
+  background: #000;
+  color: #fff;
+}
+.tokenize__link .btn:hover svg path {
+  fill: #fff;
+}
 
+.tokenize__link:hover, .tokenize__link:focus {
+  border-color: #000;
+}
 .tokens {
   min-height: 100vh;
   position: relative;
@@ -752,9 +868,22 @@ h3 + p {
   background: var(--White-100, #FFFFFF);
   border: 1px solid var(--Black-10, rgba(0, 0, 0, 0.1019607843));
   border-radius: 100px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .tokens__tab .btn svg {
   margin-right: 8px;
+}
+.tokens__tab .btn svg path {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.tokens__tab .btn:hover {
+  background: #000;
+  color: #fff;
+}
+.tokens__tab .btn:hover svg path {
+  fill: #fff;
 }
 .tokens__tab .btn:last-child {
   margin-right: 0;
@@ -764,14 +893,6 @@ h3 + p {
   border-color: var(--Primary, #FFFF00);
 }
 
-.tokens__box {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
-
 .tokens__block {
   min-height: 356px;
   background: var(--White-25, rgba(255, 255, 255, 0.2509803922));
@@ -779,6 +900,7 @@ h3 + p {
   backdrop-filter: blur(50px);
   border-radius: 48px;
   padding: 32px;
+  margin: 0 8px;
 }
 .tokens__block ul li {
   display: -webkit-box;
@@ -1018,6 +1140,20 @@ body.dark .main_btn {
 body.dark .main_btn svg path {
   fill: #000;
 }
+body.dark .main_btn:hover {
+  border-color: #fff;
+  -webkit-box-shadow: 0 0 16px #fff;
+          box-shadow: 0 0 16px #fff;
+}
+body.dark .tokenize__link .btn:hover {
+  background: var(--Primary, #FFFF00);
+  -webkit-box-shadow: 0 0 16px #FFFF00;
+          box-shadow: 0 0 16px #FFFF00;
+  color: #000;
+}
+body.dark .tokenize__link .btn:hover svg path {
+  fill: #000;
+}
 body.dark .banner__block .ai {
   border-color: #000;
   background: #fff;
@@ -1040,6 +1176,9 @@ body.dark .banner__input input {
   border: 1px solid var(--White-10, rgba(255, 255, 255, 0.1019607843));
   color: #fff;
 }
+body.dark .banner__input input:hover, body.dark .banner__input input:focus {
+  border-color: #fff;
+}
 body.dark .banner__input input::-webkit-input-placeholder {
   color: #fff;
 }
@@ -1054,6 +1193,15 @@ body.dark .banner__input input::-ms-input-placeholder {
 }
 body.dark .banner__input input::placeholder {
   color: #fff;
+}
+body.dark .banner__btn:hover {
+  background: var(--Primary, #FFFF00);
+  -webkit-box-shadow: 0 0 16px #FFFF00;
+          box-shadow: 0 0 16px #FFFF00;
+  color: #000;
+}
+body.dark .banner__btn:hover svg path {
+  fill: #000;
 }
 body.dark .footer__copy {
   color: var(--White-50, rgba(255, 255, 255, 0.5019607843));
@@ -1078,6 +1226,9 @@ body.dark .tokens__tab .btn {
 }
 body.dark .tokens__tab .btn svg path {
   fill: #fff;
+}
+body.dark .tokens__tab .btn:hover {
+  border-color: #fff;
 }
 body.dark .tokens__tab .btn.active {
   background: #FFFF00;
@@ -1112,6 +1263,9 @@ body.dark .tokenize__link {
   border: 1px solid var(--White-15, rgba(255, 255, 255, 0.1490196078));
   backdrop-filter: blur(10px);
 }
+body.dark .tokenize__link:hover {
+  border-color: #fff;
+}
 body.dark .tokenize__link .input {
   color: #fff;
 }
@@ -1137,6 +1291,9 @@ body.dark .header__soc a {
 body.dark .header__soc a svg path {
   fill: #fff;
 }
+body.dark .header__soc a:hover {
+  border-color: #fff;
+}
 body.dark .lightning.l2 {
   opacity: 0.02;
 }
@@ -1151,10 +1308,16 @@ body.dark .modal__close {
 body.dark .modal__close svg path {
   fill: #fff;
 }
+body.dark .modal__close:hover {
+  border-color: #fff;
+}
 body.dark .modal__input input, body.dark .modal__textarea {
   background: var(--Black-15, rgba(0, 0, 0, 0.1490196078));
   color: #fff;
   border: 1px solid var(--White-10, rgba(255, 255, 255, 0.1019607843));
+}
+body.dark .modal__input input:hover, body.dark .modal__textarea:hover, body.dark .modal__input input:focus, body.dark .modal__textarea:focus {
+  border-color: #fff;
 }
 body.dark .modal__input input::-webkit-input-placeholder, body.dark .modal__textarea::-webkit-input-placeholder {
   color: #fff;
@@ -1178,6 +1341,27 @@ body.dark .modal__btn .btn {
 }
 body.dark .modal__btn .btn svg path {
   fill: #fff;
+}
+body.dark .modal__btn .btn:hover {
+  border-color: #fff;
+}
+body.dark .modal__btn .btn2 {
+  -webkit-box-shadow: 0 0 0 #FFFF00;
+          box-shadow: 0 0 0 #FFFF00;
+}
+body.dark .modal__btn .btn2:hover {
+  background: var(--Primary, #FFFF00);
+  -webkit-box-shadow: 0 0 16px #FFFF00;
+          box-shadow: 0 0 16px #FFFF00;
+  color: #000;
+}
+body.dark .modal__btn .btn2:hover svg path {
+  fill: #000;
+}
+body.dark .modal__file .file:hover {
+  border-color: #fff;
+  -webkit-box-shadow: 0 0 16px #fff;
+          box-shadow: 0 0 16px #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -1336,6 +1520,8 @@ body.dark .modal__btn .btn svg path {
     z-index: 0;
   }
   .tokens__box {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-gap: 8px;

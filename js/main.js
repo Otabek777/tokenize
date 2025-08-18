@@ -67,7 +67,7 @@ $(".modal__close").click(function() {
     },300);
 });
 
-var ids = ['scene'];
+var ids = ['scene', 'scene2'];
 ids.forEach(function(id) {
     var element = document.getElementById(id);
     if (element) {
