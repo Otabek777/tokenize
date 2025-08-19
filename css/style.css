@@ -995,6 +995,13 @@ h3 + p {
 .tokens__tab .btn:hover svg path {
   fill: #fff;
 }
+.tokens__tab .btn.active:hover {
+  color: #000;
+  border-color: var(--Primary, #FFFF00);
+}
+.tokens__tab .btn.active:hover svg path {
+  fill: #000;
+}
 .tokens__tab .btn:last-child {
   margin-right: 0;
 }
@@ -1346,6 +1353,9 @@ body.dark .tokens__tab .btn svg path {
 }
 body.dark .tokens__tab .btn:hover {
   border-color: #fff;
+}
+body.dark .tokens__tab .btn.active:hover {
+  border-color: var(--Primary, #FFFF00);
 }
 body.dark .tokens__tab .btn.active {
   background: #FFFF00;

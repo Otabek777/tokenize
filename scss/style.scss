@@ -761,6 +761,13 @@ h3+p {
       fill: #fff;
     }
   }
+  .btn.active:hover {
+    color: #000;
+    border-color: var(--Primary, #FFFF00);
+    svg path {
+      fill: #000;
+    }
+  }
   .btn:last-child {
     margin-right: 0;
   }
@@ -1045,6 +1052,9 @@ body.dark {
   }
   .tokens__tab .btn:hover {
     border-color: #fff;
+  }
+  .tokens__tab .btn.active:hover {
+    border-color: var(--Primary, #FFFF00);
   }
   .tokens__tab .btn.active {
     background: #FFFF00;
