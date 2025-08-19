@@ -32,6 +32,12 @@
 // });
 // animatedElements.forEach(el => observer.observe(el));
 
+// mobile menu
+$(".menu_btn").click(function() {
+    $(this).toggleClass("active");
+    $(".menu_navbar").toggleClass("active");
+});
+
 // footer__btn
 $(".footer__btn").click(function() {
     $(this).toggleClass("active");
@@ -49,6 +55,8 @@ $(window).on('scroll', function () {
     } else {
         $(".footer").toggleClass("none", $(this).scrollTop() > 50);
         $(".tokenize__wrap").toggleClass("none", $(this).scrollTop() > 200);
+
+        
     }
 });
 
