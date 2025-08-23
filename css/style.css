@@ -1,3 +1,4 @@
+@import url(global.css);
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -488,7 +489,11 @@ body {
   transition: all 0.3s linear;
 }
 .menu_navbar .wrap {
-  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 99vh;
+  padding-top: 64px;
+  padding-bottom: 32px;
 }
 .menu_navbar ul {
   display: -webkit-box;
@@ -501,7 +506,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 .menu_navbar ul li {
   margin-bottom: 12px;
@@ -519,12 +524,39 @@ body {
 .menu_navbar ul li:last-child {
   margin-bottom: 0;
 }
+.menu_navbar .wrap .footer__btn {
+  order: 0;
+  margin: 0 auto;
+  margin-top: auto;
+  margin-bottom: 32px;
+}
+.menu_bottom {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: justify;
+  vertical-align: middle;
+  color: var(--Black-50, #00000080);
+}
+.menu_bottom .h6 {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: justify;
+  vertical-align: middle;
+  color: var(--Black-50, #00000080);
+  margin-bottom: 24px;
+}
 
 .menu_navbar.active {
   height: 100vh;
+  overflow-y: auto;
 }
 
 .menu_soc {
+  margin-bottom: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -683,7 +715,7 @@ body {
   color: #fff;
 }
 
-h1 {
+.h1 {
   font-weight: 700;
   font-style: Bold;
   font-size: 64px;
@@ -691,10 +723,10 @@ h1 {
   letter-spacing: 0%;
   margin-bottom: 16px;
 }
-h1 span {
+.h1 span {
   position: relative;
 }
-h1 span::after {
+.h1 span::after {
   content: "";
   width: 100%;
   height: 6px;
@@ -812,7 +844,7 @@ h1 span::after {
   opacity: 0;
 }
 
-h2 {
+.h2 {
   font-weight: 700;
   font-style: Bold;
   font-size: 48px;
@@ -928,7 +960,7 @@ h2 {
   padding-bottom: 200px;
 }
 
-h3 {
+.h3 {
   font-weight: 700;
   font-style: Bold;
   font-size: 24px;
@@ -940,7 +972,7 @@ h3 {
   margin-bottom: 8px;
 }
 
-h3 + p {
+.h3 + p {
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -1045,7 +1077,7 @@ h3 + p {
   margin-bottom: 0;
 }
 
-h6 {
+.h6 {
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -1231,7 +1263,13 @@ h6 {
           transform: translate(21px, -50%);
 }
 
-.footer__right {
+.footer__right ul{
+  display: flex;
+}
+.footer__right li {
+  margin-left: 24px;
+}
+.footer__right li a {
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
@@ -1242,6 +1280,9 @@ h6 {
 body.dark {
   background: var(--Black-100, #000000);
   color: #fff;
+}
+body.dark .menu_bottom {
+  color: #cfcfcf;
 }
 body.dark .menu_navbar {
   background: var(--Black-75, rgba(0, 0, 0, 0.7490196078));
@@ -1286,13 +1327,13 @@ body.dark .banner__block .ai {
 body.dark .banner__block .ai svg path {
   fill: #000;
 }
-body.dark h1 {
+body.dark .h1 {
   color: #fff;
 }
 body.dark .banner__block p {
   color: var(--White-75, rgba(255, 255, 255, 0.7490196078));
 }
-body.dark h1 span::after {
+body.dark .h1 span::after {
   background: #fff;
 }
 body.dark .banner__input input {
@@ -1330,7 +1371,7 @@ body.dark .banner__btn:hover svg path {
 body.dark .footer__copy {
   color: var(--White-50, rgba(255, 255, 255, 0.5019607843));
 }
-body.dark .footer__right {
+body.dark .footer__right li a {
   color: var(--White-50, rgba(255, 255, 255, 0.5019607843));
 }
 body.dark .footer__btn {
@@ -1364,10 +1405,10 @@ body.dark .tokens__tab .btn.active {
 body.dark .tokens__tab .btn.active svg path {
   fill: #000;
 }
-body.dark h3 {
+body.dark .h3 {
   color: #fff;
 }
-body.dark h3 + p {
+body.dark .h3 + p {
   color: var(--White-50, rgba(255, 255, 255, 0.5019607843));
 }
 body.dark .tokens__block ul li {
@@ -1376,7 +1417,7 @@ body.dark .tokens__block ul li {
 body.dark .tokens__block ul li span {
   color: #cfcfcf;
 }
-body.dark h6 {
+body.dark .h6 {
   color: #cfcfcf;
 }
 body.dark .tokens__local svg path {
@@ -1538,6 +1579,7 @@ body.dark .modal__file .file:hover {
     padding-top: 24px;
   }
   .footer {
+    display: none;
     z-index: 4;
   }
   .footer .container {
@@ -1555,7 +1597,7 @@ body.dark .modal__file .file:hover {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  .footer__right {
+  .footer__right li a {
     font-size: 8px;
   }
   .footer__btn {
@@ -1583,14 +1625,14 @@ body.dark .modal__file .file:hover {
   .banner__block .ai {
     display: none;
   }
-  h1 {
+  .h1 {
     font-size: 24px;
     line-height: 32px;
   }
-  h1 br {
+  .h1 br {
     display: none;
   }
-  h1 span::after {
+  .h1 span::after {
     height: 3px;
   }
   .banner__block {
@@ -1665,7 +1707,7 @@ body.dark .modal__file .file:hover {
     top: 21vh;
     padding: 0 16px;
   }
-  h2 {
+  .h2 {
     font-size: 24px;
     line-height: 32px;
   }
@@ -1710,7 +1752,7 @@ body.dark .modal__file .file:hover {
     padding-top: 56px;
     padding-bottom: 56px;
   }
-  h3 + p {
+  .h3 + p {
     font-size: 16px;
     line-height: 24px;
   }
@@ -1739,7 +1781,7 @@ body.dark .modal__file .file:hover {
   .tokens__block ul li {
     font-size: 12px;
   }
-  h6 {
+  .h6 {
     font-size: 12px;
     line-height: 16px;
   }

@@ -1,0 +1,550 @@
+html {
+  font-size: clamp(11px, 1.5vw + 8px, 18px);
+}
+
+/* Переменные */
+:root {
+    /* Цвета */
+    --blue: #0C87D4;
+    --dark__blue: #142841;
+    --green: #C1EFA4;
+    --dark__green: #428915;
+    --red: #C40017;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* Жирность */
+    --bd: 700;
+    --md: 600;
+    --rg: 400;
+
+    /* Границы и переходы */
+    --animate: all 0.3s ease;
+    --opacity__25: opacity(0.25);
+    --opacity__50: opacity(0.5);
+    --opacity__75: opacity(0.75);
+    --opacity__100: opacity(1);
+    --blur: blur(7.5px);
+
+
+    /* Шрифты */
+    --primary-font: 'Unbounded', sans-serif;
+    --secondary-font: 'Inter', sans-serif;
+}
+
+/* Мобильные (до 576px) */
+
+@media (min-width: 300px) and (max-width: 576px) {
+    :root {
+        --zr: 0.25rem; 
+        --xs: 0.5rem;  
+        --sm: 0.75rem; 
+        --md: 1.0rem;    
+        --lg: 1.25rem;  
+        --xl: 1.50rem;    
+        --xxl: 2rem; 
+        --hg: 3rem; 
+    }
+}
+
+/* Планшеты (577px–768px) */
+
+@media (min-width: 577px) and (max-width: 768px) {
+    :root {
+        --zr: 0.25rem; 
+        --xs: 0.5rem;  
+        --sm: 0.75rem; 
+        --md: 1.0rem;    
+        --lg: 1.25rem;  
+        --xl: 1.50rem;    
+        --xxl: 2rem; 
+        --hg: 3rem; 
+    }
+}
+
+/* Маленькие десктопы (769px–992px) */
+
+@media (min-width: 769px) and (max-width: 992px) {
+    :root {
+        --zr: 0.25rem; 
+        --xs: 0.5rem;  
+        --sm: 0.75rem; 
+        --md: 1.0rem;    
+        --lg: 1.25rem;  
+        --xl: 1.50rem;    
+        --xxl: 2rem; 
+        --hg: 3rem; 
+    }
+}
+
+/* Средние десктопы (993px–1336px) */
+
+@media (min-width: 993px) {
+    :root {
+        --zr: 0.25rem; 
+        --xs: 0.5rem;  
+        --sm: 0.75rem; 
+        --md: 1.0rem;    
+        --lg: 1.25rem;  
+        --xl: 1.50rem;    
+        --xxl: 2rem; 
+        --hg: 3rem; 
+    }
+}
+
+/* Большие десктопы (1400px+) */
+
+@media (min-width: 1600px) {
+    :root {
+        --zr: 0.25rem; 
+        --xs: 0.5rem;  
+        --sm: 0.75rem; 
+        --md: 1.0rem;    
+        --lg: 1.25rem;  
+        --xl: 1.50rem;    
+        --xxl: 2rem; 
+        --hg: 3rem; 
+    }
+}
+
+
+/* Основные теги */
+
+a {
+    text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+/* Изображения */
+
+
+.img {
+
+}
+
+.img--static {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+
+
+
+/* Эффекты */
+
+.opc__25 {
+    filter: var(--opacity__25);
+}
+
+.opc__50 {
+    filter: var(--opacity__50);
+}
+
+.opc__75 {
+    filter: var(--opacity__75);
+}
+
+
+/* Сетка */
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+  display: flex;
+}
+
+.vrt {
+  display: flex;
+  align-items: center;
+}
+
+.hrt {
+  display: flex;
+  justify-content: center;
+}
+
+.spc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ctr {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Размеры шрифтов */
+
+.fs__xs {
+  font-size: var(--xs);
+  line-height: var(--xs);
+}
+
+.fs__sm {
+  font-size: var(--sm);
+  line-height: var(--sm);
+}
+
+.fs__md {
+  font-size: var(--md);
+  line-height: var(--md);
+}
+
+.fs__lg {
+  font-size: var(--lg);
+  line-height: var(--lg);
+}
+
+.fs__xl {
+  font-size: var(--xl);
+  line-height: var(--xl);
+}
+
+.fs__xxl {
+  font-size: var(--xxl);
+  line-height: var(--xxl);
+}
+
+/* Жирность шрифтов */
+
+.fw__rg {
+  font-weight: var(--rg);
+}
+
+.fw__md {
+  font-weight: var(--md);
+}
+
+.fw__bd {
+  font-weight: var(--bd);
+}
+
+/* Отступы внутренние */
+
+.pd__xs {
+  padding: var(--xs);
+}
+
+.pd__sm {
+  padding: var(--sm);
+}
+
+.pd__md {
+  padding: var(--md);
+}
+
+.pd__lg {
+  padding: var(--lg);
+}
+
+.pd__xl {
+  padding: var(--xl);
+}
+
+.pd__hg {
+  padding: var(--hg);
+}
+
+.pd__xxl {
+  padding: var(--xxl);
+}
+
+.pd__xs--rgt {
+  padding-right: var(--xs);
+}
+
+.pd__sm--rgt {
+  padding-right: var(--sm);
+}
+
+.pd__md--rgt {
+  padding-right: var(--md);
+}
+
+.pd__lg--rgt {
+  padding-right: var(--lg);
+}
+
+.pd__xl--rgt {
+  padding-right: var(--xl);
+}
+
+.pd__xxl--rgt {
+  padding-right: var(--xxl);
+}
+
+
+.pd__xs--lft {
+  padding-left: var(--xs);
+}
+
+.pd__sm--lft {
+  padding-left: var(--sm);
+}
+
+.pd__md--lft {
+  padding-left: var(--md);
+}
+
+.pd__lg--lft {
+  padding-left: var(--lg);
+}
+
+.pd__xl--lft {
+  padding-left: var(--xl);
+}
+
+.pd__xxl--lft {
+  padding-left: var(--xxl);
+}
+
+.pd__hg--lft {
+  padding-left: var(--hg);
+}
+
+.pd__xs--top {
+  padding-top: var(--xs);
+}
+
+.pd__sm--top {
+  padding-top: var(--sm);
+}
+
+.pd__md--top {
+  padding-top: var(--md);
+}
+
+.pd__lg--top {
+  padding-top: var(--lg);
+}
+
+.pd__xl--top {
+  padding-top: var(--xl);
+}
+
+.pd__xxl--top {
+  padding-top: var(--xxl);
+}
+
+.pd__hg--top {
+  padding-top: var(--hg);
+}
+
+
+.pd__xs--btm {
+  padding-bottom: var(--xs);
+}
+
+.pd__sm--btm {
+  padding-bottom: var(--sm);
+}
+
+.pd__md--btm {
+  padding-bottom: var(--md);
+}
+
+.pd__lg--btm {
+  padding-bottom: var(--lg);
+}
+
+.pd__xl--btm {
+  padding-bottom: var(--xl);
+}
+
+.pd__xxl--btm {
+  padding-bottom: var(--xxl);
+}
+
+.pd__hg--btm {
+  padding-bottom: var(--hg);
+}
+
+/* Отступы внешние */
+.mg__xs {
+  margin: var(--xs);
+}
+
+.mg__sm {
+  margin: var(--sm);
+}
+
+.mg__md {
+  margin: var(--md);
+}
+
+.mg__lg {
+  margin: var(--lg);
+}
+
+.mg__xl {
+  margin: var(--xl);
+}
+
+.mg__xxl {
+  margin: var(--xxl);
+}
+
+.mg__hg {
+  margin: var(--hg);
+}
+
+.mg__xs--rgt {
+  margin-right: var(--xs);
+}
+
+.mg__sm--rgt {
+  margin-right: var(--sm);
+}
+
+.mg__md--rgt {
+  margin-right: var(--md);
+}
+
+.mg__lg--rgt {
+  margin-right: var(--lg);
+}
+
+.mg__xl--rgt {
+  margin-right: var(--xl);
+}
+
+.mg__xxl--rgt {
+  margin-right: var(--xxl);
+}
+
+.mg__hg--rgt {
+  margin-right: var(--hg);
+}
+
+.mg__xs--lft {
+  margin-left: var(--xs);
+}
+
+.mg__sm--lft {
+  margin-left: var(--sm);
+}
+
+.mg__md--lft {
+  margin-left: var(--md);
+}
+
+.mg__lg--lft {
+  margin-left: var(--lg);
+}
+
+.mg__xl--lft {
+  margin-left: var(--xl);
+}
+
+.mg__xxl--lft {
+  margin-left: var(--xxl);
+}
+
+.mg__xxl--lft {
+  margin-left: var(--hg);
+}
+
+.mg__xs--top {
+  margin-top: var(--xs);
+}
+
+.mg__sm--top {
+  margin-top: var(--sm);
+}
+
+.mg__md--top {
+  margin-top: var(--md);
+}
+
+.mg__lg--top {
+  margin-top: var(--lg);
+}
+
+.mg__xl--top {
+  margin-top: var(--xl);
+}
+
+.mg__xxl--top {
+  margin-top: var(--xxl);
+}
+
+.mg__xxl--top {
+  margin-top: var(--hg);
+}
+
+.mg__xs--btm {
+  margin-bottom: var(--xs);
+}
+
+.mg__sm--btm {
+  margin-bottom: var(--sm);
+}
+
+.mg__md--btm {
+  margin-bottom: var(--md);
+}
+
+.mg__lg--btm {
+  margin-bottom: var(--lg);
+}
+
+.mg__xl--btm {
+  margin-bottom: var(--xl);
+}
+
+.mg__xxl--btm {
+  margin-bottom: var(--xxl);
+}
+
+.mg__hg--btm {
+  margin-bottom: var(--hg);
+}
+
+/* Сетка */
+.gp {
+
+}
+
+.gp__zr {
+  gap: var(--zr);
+}
+
+.gp__xs {
+  gap: var(--xs);
+}
+
+.gp__sm {
+  gap: var(--sm);
+}
+
+.gp__md {
+  gap: var(--md);
+}
+
+.gp__lg {
+  gap: var(--lg);
+}
+
+.gp__xl {
+  gap: var(--xl);
+}
+
+.gp__xxl {
+  gap: var(--xxl);
+}
+
+.gp__hg {
+  gap: var(--hg);
+}
